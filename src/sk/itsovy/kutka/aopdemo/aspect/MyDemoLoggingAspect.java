@@ -10,7 +10,9 @@ import org.springframework.stereotype.Component;
 public class MyDemoLoggingAspect {
 
 
-    @Before("execution(public void addAccount())")
+//    @Before("execution(public void add*())")
+
+    @Before("execution(* sk.itsovy.kutka.aopdemo.dao.*.*(..))")
     public void beforeAddAccountAdvice() {
         System.out.println("ASPECT @BEFORE");
     }
